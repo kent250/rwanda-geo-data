@@ -1,0 +1,61 @@
+{
+  "name": "rwanda-geo-data",
+  "version": "0.1.1",
+  "description": "Typed, zero-dependency Rwanda administrative geography data (provinces, districts, sectors, cells, villages) with a fast query API.",
+  "author": {
+    "name": "SHUMBUSHO Irumva",
+    "email": "irumvashumbusho@gmail.com",
+    "url": "https://irumva.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kent250/rwanda-geo-data.git"
+  },
+  "homepage": "https://github.com/kent250/rwanda-geo-data#readme",
+  "bugs": {
+    "url": "https://github.com/kent250/rwanda-geo-data/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "generate:data": "tsx scripts/generate-data.ts",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "rwanda",
+    "geography",
+    "provinces",
+    "districts",
+    "sectors",
+    "cells",
+    "villages",
+    "administrative-divisions",
+    "location-data"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

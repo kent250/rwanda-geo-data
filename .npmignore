@@ -1,0 +1,8 @@
+src
+scripts
+test
+tsup.config.ts
+tsconfig.json
+biome.json
+*.log
+.github
