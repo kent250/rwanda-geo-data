@@ -1,6 +1,6 @@
 {
   "name": "rwanda-geo-data",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Typed, zero-dependency Rwanda administrative geography data (provinces, districts, sectors, cells, villages) with a fast query API.",
   "author": {
     "name": "SHUMBUSHO Irumva",
@@ -27,7 +27,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
