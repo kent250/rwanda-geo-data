@@ -1,5 +1,6 @@
 name: Publish to npm
 
+
 on:
   push:
     tags:
@@ -24,7 +25,7 @@ jobs:
         run: npm install -g npm@latest
 
       - run: npm ci
-      - run: npm run lint
+      - run: npm run lint:fix
       - run: npm run test
       - run: npm run build
       - run: npm publish
